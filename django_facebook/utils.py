@@ -696,8 +696,4 @@ def get_profile(user):
     '''
     Get profile
     '''
-    if django_version >= (1, 7, 0):
-        profile = user.facebookprofile
-    else:
-        profile = user.get_profile()
-    return profile
+    return user.profile
